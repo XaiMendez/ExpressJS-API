@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/XaiMendez/ExpressJS-API/issues"
   },
-  "homepage": "https://github.com/XaiMendez/ExpressJS-API#readme"
+  "homepage": "https://github.com/XaiMendez/ExpressJS-API#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
