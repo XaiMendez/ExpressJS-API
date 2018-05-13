@@ -6,7 +6,7 @@ var mongoose = require("mongoose");
 
 
 // EXPRESS MODULE
-var app = require("/.app.js");
+var app = require("./app.js");
 // enviroment var
 var port = process.env.PORT || 1234;
 
@@ -17,6 +17,10 @@ mongoose.connect("mongodb://localhost:27017/mongo_db", (error, respuesta) => {
 	if(error){
 		throw error;
 	}else{
-		console.log("conection successfully")
+		console.log(":: Conection Successfully ::");
+
+		app.listen(port, function(){
+			console.log(":: API REST SERVER IN httplocalhost://" + port + " ::");
+		})
 	}
 })

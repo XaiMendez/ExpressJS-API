@@ -9,8 +9,8 @@ var app = express();
 
 // load routes
 
-app-use(bodyParser.urlenconded({extended:false}));
-app.use(bodyPaser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 // base route
 // require, response
