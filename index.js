@@ -2,6 +2,7 @@
 
 // mongoose (intermediate with db)
 // load library
+
 var mongoose = require("mongoose");
 
 
@@ -12,15 +13,18 @@ var port = process.env.PORT || 1234;
 
 
 // Connection to db
-mongoose.connect("mongodb://localhost:27017/mongo_db", (error, respuesta) => {
+
+
+mongoose.connect("mongodb://user_db:pass_db@ds033106.mlab.com:33106/test_db", (error, respuesta) => {
 
 	if(error){
+		console.log(":: Conection fail ::");
 		throw error;
 	}else{
 		console.log(":: Conection Successfully ::");
 
 		app.listen(port, function(){
-			console.log(":: API REST SERVER IN httplocalhost://" + port + " ::");
+			console.log(":: API REST SERVER IN http://localhost:" + port + "/");
 		})
 	}
 })
