@@ -12,6 +12,8 @@ var api = express.Router();
 // routes
 api.get("/user/test", userController.test);
 
+// USER
 api.post("/user", userController.createUser);
+api.post("/login", userController.loginUser);
 
 module.exports = api;

@@ -5,13 +5,13 @@ function test(req, res){
 	res.status(200).send({message: "hello from galeryController"});
 }
 
-// import user model
+// import galeria model
 var user = require("../models/galeria.model.js");
 
-// create user
+// create galeria
 function createGalery(req, res){
 
-	// get object from user model
+	// get object from galeria model
 	var users = new user();
 
 	// params from body request

@@ -5,7 +5,7 @@ function test(req, res){
 	res.status(200).send({message: "hello from slideController"});
 }
 
-// import user model
+// import slide model
 var user = require("../models/slide.model.js");
 
 // create user
