@@ -11,6 +11,9 @@ var User = require("../models/user.model.js");
 // import bcrypt-nodejs
 var bcrypt = require("bcrypt-nodejs");
 
+// import jwt-simple
+var token = require("../toke/jwt.js");
+
 // create user
 function createUser(req, res){
 
