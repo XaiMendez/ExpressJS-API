@@ -9,8 +9,11 @@ var userController = require("../controllers/user.controller.js");
 // loading router from express.js
 var api = express.Router();
 
+// import middleware
+var middlewareAuth = require("../token/auth.js");
+
 // routes
-api.get("/user/test", userController.test);
+api.get("/user/test", middlewareAuth.authentication, userController.test);
 
 // USER
 api.post("/user", userController.createUser);
