@@ -12,7 +12,7 @@ var User = require("../models/user.model.js");
 var bcrypt = require("bcrypt-nodejs");
 
 // import jwt-simple
-var token = require("../toke/jwt.js");
+var token = require("../token/jwt.js");
 
 // create user
 function createUser(req, res){
@@ -62,7 +62,15 @@ function loginUser(req, res){
 				//console.log(user);
 				bcrypt.compare(passwordP, user.password, function(error, success){
 					if(success){
-						res.status(200).send({user});
+						
+						//res.status(200).send({user});
+						// send token param like true
+						if(params.token){
+							// return jwt
+							res.status(200).send({token: token.createToken(user)});
+						}
+
+
 					}else{
 						res.status(404).send({message:"The user could not enter"});
 					}
